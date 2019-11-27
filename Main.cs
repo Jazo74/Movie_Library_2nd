@@ -19,13 +19,14 @@ namespace MovieLibrary
      
                 Console.WriteLine("Title: {0}", record);
                 Console.WriteLine("Director: {0}", dataBase[record]["director"]);
-                Console.WriteLine("Year: {0}", dataBase[record]["year"]);
+                Console.WriteLine("Year: {0}", dataBase[record]["release_year"]);
                 Console.WriteLine("Stars: {0}", dataBase[record]["stars"]);
                 Console.WriteLine("budget: {0}", dataBase[record]["budget"]);
 
             }
             
             System.Console.ReadKey();
+            FileHandler.DictToFile("movies2.ini", dataBase);
 
             /*int counter = 0;
             string line;
