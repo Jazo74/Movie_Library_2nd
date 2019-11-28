@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+
 // RESTORE
 namespace MovieLibrary
 {
@@ -7,8 +8,17 @@ namespace MovieLibrary
     {
         public static void Main(string[] args)
         {
+            Menu.ShowMenu("main_menu");
+            while (true)
+            {
+                if (Menu.Choose == false)
+                {
+                    break;
+                }
+            }
             
-            Dictionary<String, Dictionary<String, String>> dataBase = new Dictionary<String, Dictionary<String, String>>();
+
+            /*Dictionary<String, Dictionary<String, String>> dataBase = new Dictionary<String, Dictionary<String, String>>();
             
             dataBase = FileHandler.DictFromFile("movies.ini");
             
@@ -26,7 +36,7 @@ namespace MovieLibrary
             }
             
             System.Console.ReadKey();
-            FileHandler.DictToFile("movies2.ini", dataBase);
+            FileHandler.DictToFile("movies2.ini", dataBase);*/
 
             /*int counter = 0;
             string line;
