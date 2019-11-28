@@ -11,14 +11,13 @@ namespace MovieLibrary
             menu_commmands.ForEach(Console.WriteLine);
         }
 
-        public void Header(string title)
+          public static void Header(string title)
         {
-            Console.WriteLine("-------------");
-            Console.WriteLine("-----{0}----", title);
-            Console.WriteLine("-------------");
+            Console.WriteLine(string.Concat(Enumerable.Repeat("-", title.Length)));
+            Console.WriteLine(title);
+            Console.WriteLine(string.Concat(Enumerable.Repeat("-", title.Length)));
 
         }
-
 
 
     }
